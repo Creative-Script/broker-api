@@ -4,9 +4,19 @@ python: "3.7"
 
 services: postgresql
 
-install: pip install -r requirements.txt
+install:
+  - pip install -r requirements.txt
+  - pip install coverage
+  - pip install coveralls
 
-script:
+before_script:
+  - psql -c 'create database authors_dojo;' -U postgres
   - python manage.py makemigrations
   - python manage.py migrate
+
+script:
   - python manage.py test
+  - coverage run --source='broker/apps' manage.py test && coverage report
+
+after_success:
+  - coveralls
