@@ -31,12 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # developer defined apps
+    'broker', # add the broker app
+    'drf_yasg', # automate the generation of real Swagger/OpenAPI 2.0 schemas from Django Rest Framework code.
 ]
 
 MIDDLEWARE = [
