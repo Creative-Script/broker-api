@@ -16,7 +16,7 @@ before_script:
 
 script:
   - python manage.py test
-  - coverage run --source='broker/apps' manage.py test && coverage report
+  - coverage run --source='broker' manage.py test && coverage report
 
 after_success:
   - coveralls
