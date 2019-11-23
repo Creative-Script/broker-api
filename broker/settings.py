@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # developer defined apps
-    'broker', # add the broker app
     'drf_yasg', # automate the generation of real Swagger/OpenAPI 2.0 schemas from Django Rest Framework code.
+    'broker.apps.home',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
