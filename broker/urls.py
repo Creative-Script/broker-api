@@ -22,4 +22,5 @@ urlpatterns = [
     # swagger documentation link
     path('docs/', schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     path('api/', include('broker.apps.home.urls')),
+    path('api/', include('broker.apps.authentication.urls')),
 ]
