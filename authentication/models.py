@@ -21,7 +21,7 @@ class UserManager(BaseUserManager):
             last_name=None,
             email=None,
             password=None,
-            role='BY'
+            role='CL'
     ):
         """
         Create and return a `User` with an email, first name, last name and
